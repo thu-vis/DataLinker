@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>SSL</title>
+        <link rel="icon" type="image/x-ico" href="../static/favicon.ico">
+        <link type="text/css" rel="stylesheet" href="../static/css/lib/d3.css">
+        <link type="text/css" rel="stylesheet" href="../static/css/lib/loading-icon.css">
+{#        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.2/css/bootstrap-slider.css" integrity="sha256-+bpMasWDxDlsVpNW3oZlL7L4RacwsP70u2fZt6Rxrmc=" crossorigin="anonymous" />#}
+        <link type="text/css" rel="stylesheet" href="../static/css/lib/bootstrap-slider.css">
+        <link type="text/css" rel="stylesheet" href="../static/css/lib/bootstrap-4.4.1.min.css">
+        <link type="text/css" rel="stylesheet" href="../static/css/lib/simplebar.css">
+        <link type="text/css" rel="stylesheet" href="../static/css/lib/font-awesome.css">
+        <link type="text/css" rel="stylesheet" href="../static/css/lib/simplebar.css">
+        <link rel="stylesheet" type="text/css" href="../static/js/lib/contextMenu/contextMenu.css">
+        <link type="text/css" rel="stylesheet" href="../static/css/lib/introjs.min.css">
+        <link type="text/css" rel="stylesheet" href="../static/css/fonts/fonts.css">
+        <link href="../static/css/lib/nouislider.css" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="../static/css/layout.css">
+        <link type="text/css" rel="stylesheet" href="../static/css/graph.css">
+        <link type="text/css" rel="stylesheet" href="../static/css/image.css">
+        <link type="text/css" rel="stylesheet" href="../static/css/history.css">
+        <link type="text/css" rel="stylesheet" href="../static/css/dist.css">
+        <link type="text/css" rel="stylesheet" href="../static/css/control.css">
+        <link type="text/css" rel="stylesheet" href="../static/css/navigation.css">
+        <link type="text/css" rel="stylesheet" href="../static/css/menu.css">
+
+        <meta charset="UTF-8">
+    </head>
+
+<!-- <body style="overflow:hidden;"> -->
+    <body>
+        <div class="self-row" id="main-row">
+            <div class="self-column" id="control-column">
+                <div class="self-column" style="width: 100%">
+                    {%  include 'control.html' %}
+                </div>
+            </div>
+            <div class="self-column" id="control-graph-column">
+                <div class="self-row" id="dist-row">
+                    {% include 'dist.html'%}
+
+                </div>
+                <div class="self-row" id="graph-row">
+                    {% include 'graph.html'%}
+
+                </div>
+            </div>
+            <div class="self-column" id="history-info-column">
+                <div class="self-row" id="history-row">
+                    {% include 'history.html'%}
+                </div>
+                <div class="self-row" id="image-row">
+                    {% include 'image.html'%}
+                </div>
+            </div>
+        </div>
+        <div class="loading">
+
+        </div>
+        <svg version="1.1" width="40px" height="40px"
+                             style="enable-background:new 0 0 512 512; opacity: 1" xml:space="preserve" class="loading-svg">
+                            <symbol id="static-update-icon" viewBox="-150 -150 812 812">
+                                <g>
+                                    <g>
+                                        <path d="M463.702,162.655L442.491,14.164c-1.744-12.174-16.707-17.233-25.459-8.481l-30.894,30.894
+                                            C346.411,12.612,301.309,0,254.932,0C115.464,0,3.491,109.16,0.005,248.511c-0.19,7.617,5.347,14.15,12.876,15.234l59.941,8.569
+                                            c8.936,1.304,17.249-5.712,17.125-15.058C88.704,165.286,162.986,90,254.932,90c22.265,0,44.267,4.526,64.6,13.183l-29.78,29.78
+                                            c-8.697,8.697-3.761,23.706,8.481,25.459l148.491,21.211C456.508,181.108,465.105,172.599,463.702,162.655z"/>
+                                    </g>
+                                </g>
+                                <g>
+                                    <g>
+                                        <path d="M499.117,249.412l-59.897-8.555c-7.738-0.98-17.124,5.651-17.124,16.143c0,90.981-74.019,165-165,165
+                                            c-22.148,0-44.048-4.482-64.306-13.052l28.828-28.828c8.697-8.697,3.761-23.706-8.481-25.459L64.646,333.435
+                                            c-9.753-1.393-18.39,6.971-16.978,16.978l21.21,148.492c1.746,12.187,16.696,17.212,25.459,8.481l31.641-31.626
+                                            C165.514,499.505,210.587,512,257.096,512c138.794,0,250.752-108.618,254.897-247.28
+                                            C512.213,257.088,506.676,250.496,499.117,249.412z"/>
+                                    </g>
+                                </g>
+                            </symbol>
+                            <symbol id="animate-update-icon" viewBox="0 0 60 60">
+                              <g transform="translate(30,30)">
+                                <path class="circle-path" d="M1.2246467991473533e-15,-20A20,20,0,1,1,-20,2.4492935982947065e-15L-16,1.959434878635765e-15A16,16,0,1,0,9.797174393178826e-16,-16Z"></path>
+                              </g>
+
+                            </symbol>
+                            <use xlink:href="#animate-update-icon" x="0" y="0" width="40px" height="40px"></use>
+                        </svg>
+    </body>
+
+    <script src="../static/js/lib/d3.js"></script>
+    <script src="../static/js/lib/common.js"></script>
+    <script src="../static/js/lib/request_dag.js"></script>
+    <script src="../static/js/lib/jquery-3.2.1.js"></script>
+    <script src="../static/js/lib/nouislider.js"></script>
+    <script src="../static/js/lib/planck.js"></script>
+    <script src="../static/js/lib/d3-bubbletreemap.js"></script>
+    <script src="../static/js/lib/popper.min.js"></script>
+    <script src="../static/js/lib/bootstrap-4.4.1.min.js"></script>
+    <script src="../static/js/lib/seedrandom.js"></script>
+    <script src="../static/js/lib/d3-lasso.min.js"></script>
+    <script src="../static/js/lib/d3-contour.v1.min.js"></script>
+    <script src="../static/js/lib/d3-sankey.js"></script>
+    <script src="../static/js/lib/d3-scale-chromatic.v1.min.js"></script>
+    <script src="../static/js/lib/contextMenu/contextMenu.js"></script>
+    <script src="../static/js/lib/simplebar.min.js"></script>
+    <script src="../static/js/lib/graham_scan.js"></script>
+    <script src="../static/js/lib/d3-ForceEdgeBundling.js"></script>
+    <script src="../static/js/lib/d3-OldForceEdgeBundling.js"></script>
+    <script src="../static/js/lib/simplebar.min.js"></script>
+{#    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.2/bootstrap-slider.js" integrity="sha256-59/apVFrosMLFX2dHZLGvb3nPpu7e0Yx1rsDr1dTRrk=" crossorigin="anonymous"></script>#}
+{#    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-chained/1.0.1/jquery.chained.min.js" integrity="sha256-rHLNdySkNk2ASBOVCK7UeMNq7jMtZxauBOK7JhsWJsM=" crossorigin="anonymous"></script>#}
+{#    <script src="https://unpkg.com/bezier-intersect"></script>#}
+    <script src="../static/js/lib/bootstrap-slider.js"></script>
+    <script src="../static/js/lib/jquery.chained.min.js"></script>
+    <script src="../static/js/lib/bezier-intersect.js"></script>
+    <script src="../static/js/lib/graham_scan.js"></script>
+    <script src="../static/js/lib/hull.js"></script>
+    <script src="../static/js/lib/intro.min.js"></script>
+
+    <script src="../static/js/data_loader.js"></script>
+    <script src="../static/js/graph.js"></script>
+    <script src="../static/js/graph_transform.js"></script>
+    <script src="../static/js/graph_highlight.js"></script>
+    <script src="../static/js/graph_helper.js"></script>
+    <script src="../static/js/graph_voronoi.js"></script>
+    <script src="../static/js/graph_selection_box.js"></script>
+    <script src="../static/js/filter.js"></script>
+    <script src="../static/js/image.js"></script>
+    <script src="../static/js/matrix.js"></script>
+    <script src="../static/js/dist.js"></script>
+    <script src="../static/js/dist_slider.js"></script>
+    <script src="../static/js/history.js"></script>
+    <script src="../static/js/helper.js"></script>
+    <script src="../static/js/handler.js"></script>
+    <script src="../static/js/global.js"></script>
+    <script src="../static/js/setting_view.js"></script>
+    <script src="../static/js/interaction.js"></script>
+    <script src="../static/js/menu.js"></script>
+    <script src="../static/js/false_backend.js"></script>
+    <script src="../static/js/main.js"></script>
+
+</html>

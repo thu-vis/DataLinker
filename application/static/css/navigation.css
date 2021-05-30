@@ -1,0 +1,12 @@
+#navigation {
+    width: 100%;
+    height: 100%;
+    background-color: #560731;
+}
+
+#navigation-title {
+    font-size: 19px;
+    margin: 15px 0 15px 24px;
+    color: white;
+    display: inline-block;
+}

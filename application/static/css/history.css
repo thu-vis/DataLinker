@@ -1,0 +1,45 @@
+#history-row {
+    /*background-color: #fafafa;*/
+}
+
+#history-row {
+    /*overflow-y: auto;*/
+}
+
+#history-view{
+    overflow-y: auto;
+}
+
+#content-title {
+    display: flex;
+    border-bottom: 1px solid #DEDEDE;
+    margin-top: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.title-1{
+    padding-left: 3%;
+    padding-right: 2%;
+}
+
+.title-2{
+    padding-left: 2%;
+    /*padding-right: 3.5%;*/
+}
+
+.title-3{
+    padding-left: 3%;
+    /*padding-right: 2%;*/
+}
+
+.action-circle {
+}
+
+.action-id {
+    pointer-events: none;
+}
+
+.reset-icon{
+    cursor: pointer;
+}

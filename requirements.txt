@@ -1,0 +1,17 @@
+tqdm==4.36.1
+numpy==1.19.0
+matplotlib==2.1.0
+pandas==0.25.1
+scipy==1.5.0
+Flask==1.1.1
+scikit_learn==0.21.3
+anytree==2.8.0
+Flask-Cors==3.0.9
+Flask-Script==2.0.6
+Flask-Session==0.3.2
+ipython==7.16.1
+joblib==0.16.0
+networkx==2.5
+numba==0.50.1
+opencv-python==4.4.0.46
+cffi==1.14.0
