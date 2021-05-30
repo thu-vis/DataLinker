@@ -909,7 +909,7 @@ let GraphLayout = function (container) {
             if(highlight_plg.if_lasso()){
                 highlight_plg.set_lasso();
             }
-
+            $('#show-voronoi').trigger("click");
             resolve();
         })
     };
