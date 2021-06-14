@@ -31,11 +31,23 @@ numba==0.50.1
 opencv-python==4.4.0.46
 cffi==1.14.0
 ```
-You can simply install them with `pip install -r requirements.txt`. This code is tested on Windows and with python3.6.
+You can simply install them with `pip install -r requirements.txt`. This code is tested on Windows and with python3.6. 
+
+Or if you are an anaconda or linux user follow these instructions.
+1.  git clone git@github.com:thu-vis/DataLinker.git
+ 
+2.  cd DataLinker/
+ 
+3.  conda create -n sslt python=3.6
+ 
+4.  conda activate sslt
+ 
+5.  pip install -r requirements.txt
+
 
 Quick Start with Demo Data
 -----------------
-Step 1: download demo data from [here](https://drive.google.com/file/d/1kOthHFC6Wszeh01Rvb3_SLbp3s6522im/view?usp=sharing), and unpack it in root folder.
+Step 1: download demo data from [here](https://drive.google.com/file/d/1kOthHFC6Wszeh01Rvb3_SLbp3s6522im/view?usp=sharing), and unpack it in the root folder DataLinker (or DataLinker-main if you download the code with "download ZIP").
 
 Step 2: setup the system:
 ```python manage.py run 8181```

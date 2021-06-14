@@ -46,7 +46,8 @@ class CaseBase():
         model.data = save[1]
 
         # change abs path in buffer
-        selected_setting = os.path.split(model.selected_dir)[1]
+        # selected_setting = os.path.split(model.selected_dir)[1]
+        selected_setting = model.selected_dir.split("\\")[-1]
         model.data.selected_dir = os.path.join(config.data_root, model.data.dataname, selected_setting)
         model.selected_dir = model.data.selected_dir
 
