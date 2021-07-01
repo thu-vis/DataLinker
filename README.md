@@ -67,7 +67,7 @@ If you use this code for your research, please consider citing:
 ```
 
 ## Contact
-If you have any problem about our code, feel free to contact
+If you have any problem about this code, feel free to contact
 - ccj17@mails.tsinghua.edu.cn
 
 or describe your problem in Issues.
