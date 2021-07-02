@@ -4,8 +4,6 @@ from application import create_app
 app = create_app()
 manager = Manager(app)
 
-# manager.add_command("run", Server())
-
 @manager.command
 def run(port):
     app.run(host="0.0.0.0", port=port, debug=True)
