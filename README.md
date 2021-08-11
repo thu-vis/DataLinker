@@ -1,5 +1,6 @@
 DataLinker
 ======================
+Codes for the interactive analysis system, DataLinker, described in our paper "Interactive Graph Construction for Graph-Based Semi-Supervised Learning" (TVCG 2021).
 
 Introduction
 --
@@ -57,12 +58,14 @@ Step 3: visit http://localhost:8181/ in a browser.
 ## Citation
 If you use this code for your research, please consider citing:
 ```
-@article{chen2021oodanalyzer,
+@article{chen2021interactive,
   title={Interactive Graph Construction for Graph-Based Semi-Supervised Learning},
   author={Chen, Changjian and Wang, Zhaowei and Wu, Jing and Wang, Xiting and Guo, Lan-Zhe and Li, Yu-Feng and Liu, Shixia},
   journal={IEEE Transactions on Visualization and Computer Graphics},
   year={2021},
-  note={to be published, \href{http://dx.doi.org/10.1109/TVCG.2021.3084694}{doi: \textcolor{black}{10.1109/TVCG.2021.3084694}}}
+  volume={27},
+  number={9},
+  pages={3701-3716}
 }
 ```
 
